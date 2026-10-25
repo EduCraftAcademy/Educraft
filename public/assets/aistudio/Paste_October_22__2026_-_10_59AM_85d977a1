@@ -1,0 +1,1578 @@
+# EDUCRAFT AI STUDIO
+## Complete Full-Stack Education Platform Build Specification
+
+Act as a senior full-stack software engineer, AI engineer, UI/UX designer, database architect, cybersecurity specialist, and education technology product manager.
+
+Your task is to build **EduCraft AI Studio**, a complete, production-oriented online education platform for primary school, middle school, and high school students.
+
+This is a real application, not a prototype, static website, clickable mockup, or collection of disconnected screens.
+
+Implement working features across the frontend, backend, database, AI services, subscription system, teacher management, scheduling, virtual classrooms, and document exports.
+
+**Do not simply describe what needs to be built. Inspect the existing project, modify its actual files, implement the features, run available tests, and fix errors.**
+
+If a feature requires credentials, an external service, or deployment configuration, implement the integration properly and document exactly what remains necessary. Never pretend an unconfigured service is working.
+
+---
+
+# 1. PROJECT PRESERVATION AND INITIAL INSPECTION
+
+Before modifying anything:
+
+1. Inspect every important existing project file.
+2. Identify the current frontend framework, backend, dependencies, API routes, AI integrations, export functions, styling system, and existing features.
+3. Preserve working functionality.
+4. Reuse existing components, routes, utilities, and dependencies whenever reasonable.
+5. Avoid replacing the project with a new application unless the existing architecture genuinely requires it.
+6. Do not remove features simply because they are difficult to maintain.
+7. Do not leave the application with broken imports, missing dependencies, placeholder buttons, or incomplete routes.
+8. Create a backup or use version control before major structural changes.
+
+The existing project uses a React + TypeScript frontend and a Node.js + Express backend, including a backend file named `server.ts`. The application has previously used Google's Gemini API and has a custom OpenAI-compatible AI provider integration.
+
+Preserve and improve this architecture unless inspecting the actual files reveals a compelling reason to change it.
+
+Keep the existing application name: **EduCraft AI Studio**.
+
+If the repository already contains a working lesson-generation system, retain and improve it instead of creating a second, incompatible generator.
+
+---
+
+# 2. PRODUCT VISION
+
+EduCraft AI Studio is an online learning platform that combines AI-powered educational resources with real human teachers.
+
+The platform serves:
+
+- Primary school students.
+- Middle school students.
+- High school students.
+- Parents and guardians.
+- Teachers employed by EduCraft.
+- Administrators and platform owners.
+
+The business model is based on subscriptions paid by families.
+
+EduCraft employs teachers and pays them fixed monthly salaries. Teachers do not independently sell their courses or determine their own prices.
+
+Students subscribe to complete school-level packages rather than purchasing individual subjects separately.
+
+The platform should support multiple curricula, grade levels, languages, and subjects.
+
+The main objectives are to:
+
+1. Help students understand school subjects.
+2. Generate high-quality lessons using AI.
+3. Provide real online classes with qualified teachers.
+4. Give parents visibility into their children's progress.
+5. Make lesson resources available for download.
+6. Automate subscriptions, class assignments, attendance, and scheduling.
+7. Give administrators control over the entire educational business.
+
+---
+
+# 3. USER ROLES AND PERMISSIONS
+
+Implement secure role-based access control.
+
+## A. Student
+
+Students can:
+
+- View their assigned grade, curriculum, subjects, and learning package.
+- Access AI-generated lessons according to their subscription.
+- Take quizzes and practice exercises.
+- Attend assigned live classes.
+- Access recorded lessons according to their plan.
+- View homework, grades, attendance, and teacher feedback.
+- Download permitted educational resources.
+- Receive schedule reminders and learning notifications.
+- View subscription status and expiration date.
+- Request help from teachers when the relevant feature is available.
+
+Students must never access another student's private information.
+
+## B. Parent or guardian
+
+Parents can:
+
+- Register and manage their own account.
+- Add and manage multiple children.
+- View each child's grade, curriculum, subjects, and assigned plan.
+- View progress, grades, homework, attendance, and teacher feedback.
+- See upcoming classes and past sessions.
+- Manage subscriptions and payment history.
+- Receive payment reminders and class notifications.
+- Update contact information.
+- Request support.
+- Request schedule changes where permitted.
+
+A parent must only access children explicitly associated with their account.
+
+## C. Teacher
+
+Teachers are employees of EduCraft and receive fixed monthly salaries.
+
+Teacher dashboards must include:
+
+- Assigned classes.
+- Weekly and monthly schedules.
+- Student lists for assigned classes.
+- Class attendance.
+- Upcoming lessons.
+- Homework creation and management.
+- Grading and feedback tools.
+- Educational resource uploads.
+- Lesson preparation tools.
+- Access to approved AI-generated lesson materials.
+- Class notes and progress records.
+- Notifications about timetable changes.
+- A view of their employment and salary records where authorized.
+
+Teachers must not be able to change subscription prices, grant themselves administrator privileges, or access unrelated students.
+
+Salary information must be private and visible only to authorized personnel.
+
+## D. Administrator
+
+Administrators can manage:
+
+- Student accounts.
+- Parent accounts.
+- Teacher accounts.
+- Administrator permissions.
+- School levels and grade levels.
+- Curricula and subjects.
+- Subscription plans and pricing.
+- Payments and subscriptions.
+- Teacher salaries.
+- Teacher qualifications and availability.
+- Class sizes and schedules.
+- Recorded lessons.
+- Educational resources.
+- AI provider settings.
+- Platform configuration.
+- Notifications.
+- Reports and analytics.
+- Customer support.
+- Audit logs.
+
+Protect all administrator routes with server-side authorization. Hiding an administrator button in the frontend is not sufficient security.
+
+## E. Platform owner
+
+Provide a protected owner role for sensitive business operations, including:
+
+- Creating and disabling administrator accounts.
+- Changing financial configuration.
+- Viewing platform-wide revenue and expenses.
+- Managing teacher salary budgets.
+- Configuring payment credentials and AI providers.
+- Accessing security and audit settings.
+
+Only the platform owner should have access to the most sensitive configuration.
+
+---
+
+# 4. REGISTRATION AND ONBOARDING
+
+Create a complete registration and login experience.
+
+Support:
+
+- Email and password registration.
+- Secure login and logout.
+- Email verification where configured.
+- Password reset.
+- Session expiration and revocation.
+- Role-specific onboarding.
+- Protected routes.
+- Appropriate error messages.
+- Loading states and form validation.
+
+During parent onboarding, collect the information needed to configure a child's learning experience:
+
+1. Student's name.
+2. School level.
+3. Grade.
+4. Curriculum or education system.
+5. Preferred learning language.
+6. Relevant subjects.
+7. Time zone.
+8. Availability for classes.
+
+Use a consistent database model for grades and curricula.
+
+Allow administrators to configure available education systems rather than hardcoding one curriculum into the entire application.
+
+Because the platform serves minors, collect only necessary personal information, protect it carefully, and implement appropriate parental consent and data-protection procedures.
+
+Do not expose children's personal information in public URLs, logs, or unsecured API responses.
+
+---
+
+# 5. SUBSCRIPTION PLANS AND PRICING
+
+Implement the following initial pricing in Moroccan dirhams (MAD).
+
+These prices must be editable by administrators.
+
+| Plan | Monthly | Quarterly | Yearly |
+|---|---:|---:|---:|
+| Free | 0 MAD | 0 MAD | 0 MAD |
+| Basic | 149 MAD | 399 MAD | 1,490 MAD |
+| Plus | 249 MAD | 699 MAD | 2,490 MAD |
+| Premium | 400 MAD | 1,099 MAD | 3,990 MAD |
+| VIP | 700 MAD | 1,950 MAD | 7,000 MAD |
+
+Quarterly subscriptions cover three months. Yearly subscriptions cover twelve months.
+
+Display the billing period, total charge, and any discount clearly before payment.
+
+Do not silently charge users for renewals or introduce hidden fees.
+
+## Free plan
+
+Include:
+
+- Three AI-generated lessons per month.
+- Basic quizzes.
+- Limited access to educational previews.
+- No live teacher classes.
+- No recorded teacher lessons.
+- No complete paid school package.
+
+## Basic plan
+
+Include:
+
+- Access to the student's complete school-level package.
+- AI-generated lessons.
+- Basic quizzes and practice exercises.
+- Standard educational resources.
+- No live teacher classes.
+- No recorded teacher lessons.
+
+## Plus plan
+
+Include:
+
+- Everything in Basic.
+- Four live teacher classes per month.
+- Recorded teacher lessons.
+- Access to the student's complete school-level package.
+- Basic quizzes and AI learning assistance.
+- Maximum of 20 students per live class.
+
+## Premium plan
+
+Include:
+
+- Everything in Plus.
+- Eight live teacher classes per month.
+- Recorded teacher lessons.
+- Advanced AI learning tools.
+- One makeup class per month, subject to availability and scheduling rules.
+- Maximum of 10 students per live class.
+- Priority support.
+
+## VIP plan
+
+Include:
+
+- Everything in Premium.
+- Twelve live teacher classes per month in total, across all subjects.
+- Recorded teacher lessons.
+- Advanced AI learning tools.
+- Two makeup classes per month, subject to availability and scheduling rules.
+- Maximum of four students per live class.
+- Highest-priority support.
+
+**Important:** Twelve VIP classes means twelve classes in total each month, not twelve classes for every subject.
+
+Likewise, four Plus classes and eight Premium classes are monthly totals across the student's subjects.
+
+Do not interpret the numbers as classes per week.
+
+## Subscription enforcement
+
+Implement a proper subscription entitlement system.
+
+The backend must determine which features a user can access based on the actual subscription status and applicable plan.
+
+A user must not gain premium features simply by changing frontend code or modifying a request.
+
+Support:
+
+- Active subscriptions.
+- Pending payments.
+- Successful payments.
+- Failed payments.
+- Expired subscriptions.
+- Cancelled subscriptions.
+- Refunds where supported.
+- Renewal dates.
+- Payment history.
+- Upgrade and downgrade workflows.
+- Administrative adjustments with audit records.
+
+When a paid subscription expires, provide a three-day grace period.
+
+During the grace period, preserve the student's access according to the defined grace-period policy and clearly notify the parent.
+
+After the grace period, restrict paid features until payment is confirmed.
+
+**Never delete the student's grades, completed homework, attendance history, account, or learning progress because a subscription expires.**
+
+When payment is confirmed, restore the appropriate access automatically.
+
+For the Free plan, enforce the three-AI-lesson monthly quota on the server, including across multiple devices and browser sessions.
+
+Define and implement fair usage limits for paid AI plans. Make the limits configurable by administrators and display them clearly to users.
+
+---
+
+# 6. PAYMENT INTEGRATION
+
+Implement a real payment architecture suitable for Moroccan families.
+
+Support payment methods through providers that actually offer the required services, such as:
+
+- Bank cards.
+- Bank transfer workflows where supported.
+- Additional local payment methods if the selected provider supports them.
+
+Research provider availability and eligibility before claiming a payment method is supported.
+
+Do not assume every international payment gateway is available to a Moroccan business.
+
+Create a payment-provider abstraction so payment services can be changed without rewriting the subscription system.
+
+The payment flow must include:
+
+1. Selecting a subscription plan.
+2. Selecting monthly, quarterly, or yearly billing.
+3. Displaying the exact price and billing period.
+4. Creating a pending order on the server.
+5. Initiating payment through the configured provider.
+6. Receiving and verifying payment confirmation.
+7. Activating the subscription only after trusted confirmation.
+8. Recording the transaction.
+9. Sending a confirmation notification.
+10. Updating the parent dashboard.
+
+Implement signed webhook verification, idempotency, and transaction validation where supported.
+
+Never activate a paid subscription merely because the browser redirects to a success page.
+
+Never trust an amount supplied by the frontend. Calculate the payable amount on the server using the active pricing configuration.
+
+Do not store raw card numbers or card security codes.
+
+For manual bank transfers, create a secure pending-payment workflow. Require verification by authorized staff or a trusted provider before granting paid access.
+
+Provide a sandbox or test mode so payment workflows can be tested without charging real money.
+
+If payment credentials are missing, show a clear configuration message and keep the application usable in development mode.
+
+Do not fabricate successful transactions.
+
+---
+
+# 7. AI LEARNING ENGINE
+
+AI is a central part of EduCraft.
+
+The application must use a real AI provider to generate educational content. Do not replace AI functionality with hardcoded sample lessons.
+
+Preserve the existing provider integration where possible and improve its reliability.
+
+## AI provider configuration
+
+Support:
+
+- Google Gemini where correctly configured.
+- OpenRouter using its OpenAI-compatible API.
+- Other compatible providers through a reusable provider interface where practical.
+
+The existing project has used a custom OpenAI-compatible integration with the intended OpenRouter endpoint:
+
+`https://openrouter.ai/api/v1/chat/completions`
+
+The existing model configuration has included:
+
+`qwen/qwen-2.5-72b-instruct:free`
+
+Inspect the actual project before changing these values.
+
+Keep the model configurable through environment variables or protected administrator settings.
+
+Do not assume that a model name is still available or that a free model will always be free. Report provider errors honestly.
+
+For OpenRouter, use the configured API key and selected model. Follow the provider's current API requirements.
+
+Keep all AI API keys on the server. Never expose them in frontend bundles, browser storage, or public API responses.
+
+Use server-side provider adapters so switching models does not require rebuilding the frontend.
+
+## AI reliability
+
+Implement:
+
+- Request validation.
+- Timeouts.
+- Retry logic for appropriate transient errors.
+- Rate limiting.
+- Clear error handling.
+- Usage tracking.
+- Token or cost tracking where available.
+- Structured output validation.
+- Safe handling of malformed AI responses.
+- Configurable generation limits.
+- Protection against excessively large requests.
+
+Do not retry authentication errors indefinitely.
+
+Do not return raw secrets or full internal stack traces to users.
+
+## AI learning features
+
+Implement:
+
+1. AI lesson generation.
+2. AI quiz generation.
+3. Practice worksheet generation.
+4. Vocabulary explanations.
+5. Step-by-step explanations.
+6. Age-appropriate examples.
+7. Revision and recap sheets.
+8. Homework assistance.
+9. Adaptive explanations for students who struggle.
+10. Teacher lesson preparation.
+11. Summaries and study guides.
+12. Learning recommendations based on recorded progress.
+
+AI must support multiple school levels, subjects, curricula, and languages.
+
+Where useful, allow teachers to review and edit AI-generated materials before sharing them with students.
+
+For high-stakes grading or sensitive educational decisions, provide appropriate human oversight.
+
+---
+
+# 8. AI LESSON GENERATOR
+
+Create a complete lesson-generation interface.
+
+The user should be able to select:
+
+- School level.
+- Grade.
+- Curriculum.
+- Subject.
+- Topic.
+- Language.
+- Difficulty.
+- Lesson length.
+- Number of presentation slides.
+- Whether to include exercises.
+- Whether to include a quiz.
+- Whether to include an answer key.
+- Whether the content is for a student or teacher.
+
+Generate educational content with a consistent, validated structure.
+
+Use a structured JSON schema or equivalent validated format with fields such as:
+
+- `title`
+- `objective`
+- `grade`
+- `curriculum`
+- `subject`
+- `language`
+- `paragraphs`
+- `vocab`
+- `slides`
+- `exercises`
+- `quiz`
+- `answerKey`
+- `teacherNotes`
+- `references`
+
+The exact schema may evolve, but maintain compatibility with existing project features wherever possible.
+
+## Lesson quality
+
+Lessons must be educationally useful, not merely long.
+
+Require:
+
+- Clear explanations.
+- Accurate definitions.
+- Examples appropriate for the selected grade.
+- Logical progression.
+- Common misconceptions.
+- Practical applications where relevant.
+- Short recaps.
+- Suitable vocabulary.
+- Exercises of appropriate difficulty.
+
+Avoid repetitive paragraphs, fabricated facts, irrelevant examples, and unnecessary complexity.
+
+Use the selected curriculum when reliable curriculum information is available.
+
+Do not invent official curriculum requirements or falsely claim that a lesson has been officially approved.
+
+When accuracy is uncertain, make the uncertainty clear and allow teacher review.
+
+## Slides
+
+Generate the requested number of slides within sensible configurable limits.
+
+Each slide should contain:
+
+- A title.
+- A clear learning purpose or category.
+- Three to five concise bullet points where appropriate.
+- Examples or diagrams when useful.
+- A logical connection to the surrounding slides.
+
+Do not overload slides with large blocks of text.
+
+## Quizzes
+
+Generate questions appropriate to the selected grade and topic.
+
+Support multiple-choice questions and other question types where implemented.
+
+For multiple-choice questions, validate that:
+
+- Every question has a prompt.
+- Options are present.
+- The correct answer is valid.
+- The answer key matches the question.
+- No required fields are missing.
+
+Store generated materials when the user chooses to save them.
+
+Allow regeneration of individual sections without unnecessarily regenerating the entire lesson.
+
+---
+
+# 9. PDF, WORD, AND POWERPOINT EXPORTS
+
+Implement real downloads for all three formats:
+
+- PDF.
+- Microsoft Word `.docx`.
+- Microsoft PowerPoint `.pptx`.
+
+Preserve and improve existing Word and PowerPoint export functionality.
+
+Do not create fake download buttons.
+
+Each export must use the actual lesson content selected by the user.
+
+## PDF
+
+Include:
+
+- Lesson title.
+- Grade and subject.
+- Learning objectives.
+- Lesson chapters.
+- Vocabulary.
+- Exercises.
+- Slides or slide summaries where appropriate.
+- Quiz and answer key when selected.
+- Teacher notes when authorized.
+
+Support readable page breaks, page numbers, consistent typography, and multilingual text as appropriate.
+
+## Word
+
+Create a polished, editable teaching document with:
+
+- A professional title page or heading.
+- Clear section headings.
+- Readable paragraphs.
+- Vocabulary tables.
+- Exercises.
+- Quiz and answer key.
+- Teacher notes when selected.
+
+## PowerPoint
+
+Create a presentation with:
+
+- Consistent visual design.
+- Readable font sizes.
+- Clear slide titles.
+- Concise content.
+- Appropriate spacing.
+- Useful diagrams or illustrations when supported.
+- An educational appearance suitable for classrooms.
+
+Use actual slide content rather than screenshots of the lesson page.
+
+Protect export endpoints with authentication and appropriate permissions.
+
+Handle large files safely and return meaningful error messages when an export fails.
+
+---
+
+# 10. TEACHER EMPLOYMENT AND FIXED SALARIES
+
+EduCraft hires and pays teachers fixed monthly salaries.
+
+This is an employer-managed system, not a teacher marketplace.
+
+Build a teacher management module with:
+
+- Teacher profiles.
+- Qualifications.
+- Subjects taught.
+- Grade levels supported.
+- Curriculum expertise.
+- Languages.
+- Weekly availability.
+- Employment status.
+- Monthly salary.
+- Assigned classes.
+- Attendance records.
+- Leave or unavailability.
+- Salary payment records.
+- Administrative notes.
+
+Teachers must not be able to edit their own salary or approve their own salary payments.
+
+Create a private salary-management interface for authorized administrators.
+
+Allow administrators to configure each teacher's monthly salary.
+
+Do not assume a fixed salary for every teacher.
+
+## Salary and budget reports
+
+Provide reports showing:
+
+- Monthly salary obligations.
+- Total teaching payroll.
+- Teacher workload.
+- Scheduled class hours.
+- Completed classes.
+- Revenue by subscription plan.
+- Payment-processing costs where available.
+- Estimated operating margin.
+
+Clearly distinguish actual recorded expenses from estimates.
+
+Do not count pending payments as confirmed revenue.
+
+Do not treat subscription revenue as profit.
+
+Include a budget-planning tool that lets the owner estimate whether subscription revenue can cover teacher salaries, video-service costs, AI usage, payment fees, and other operating expenses.
+
+---
+
+# 11. AUTOMATIC CLASS ASSIGNMENT
+
+Build a scheduling and allocation engine.
+
+Students should be assigned to appropriate classes automatically.
+
+The system must consider:
+
+- Student's school level.
+- Grade.
+- Curriculum.
+- Subject.
+- Language.
+- Subscription plan.
+- Number of remaining classes.
+- Teacher qualifications.
+- Teacher availability.
+- Class capacity.
+- Existing reservations.
+- Time zone.
+- Scheduling conflicts.
+- Makeup-class eligibility.
+
+Never assign a student to an incompatible grade, curriculum, or subject.
+
+Never exceed the maximum class size for a student's plan.
+
+For mixed-plan classes, enforce the strictest applicable class-size restriction. For example, if a class includes VIP students, the class must not exceed four students unless a separate class is created.
+
+Do not double-book teachers or students.
+
+If no appropriate class is available, place the student on a waiting list or notify the administrator. Never silently discard the assignment request.
+
+Record why an assignment was made so administrators can investigate scheduling problems.
+
+## Timetable model
+
+Create a configurable timetable for recurring weekly classes.
+
+Support:
+
+- Subject.
+- Teacher.
+- Grade.
+- Curriculum.
+- Start time.
+- End time.
+- Time zone.
+- Maximum capacity.
+- Video-room reference.
+- Recurrence.
+- Cancellation.
+- Rescheduling.
+- Attendance.
+- Completion status.
+
+Use a consistent scheduling model that can support different school calendars and time zones.
+
+## Fixed schedule with controlled flexibility
+
+Use a hybrid scheduling model:
+
+1. The platform assigns a regular timetable automatically.
+2. Parents can request schedule changes.
+3. Administrators or authorized scheduling rules approve changes when needed.
+4. Alternative classes are offered only when they are compatible and available.
+5. The teacher and affected families receive notifications.
+
+Parents should not be able to move students into fully booked classes or override teacher availability.
+
+---
+
+# 12. LIVE VIRTUAL CLASSROOMS
+
+Implement real-time online classes using a suitable third-party video classroom service.
+
+Prefer integrating a provider that supports the necessary video, audio, chat, screen-sharing, access-control, and classroom features.
+
+Do not attempt to create a complete real-time video infrastructure from scratch unless the existing project already contains a suitable implementation.
+
+The classroom should support, where available through the chosen provider:
+
+- Live audio and video.
+- Teacher screen sharing.
+- Interactive whiteboard.
+- Text chat.
+- Raise hand.
+- Participant management.
+- Polls or quizzes.
+- File sharing.
+- Classroom moderation.
+- Secure room access.
+- Recording where permitted.
+- Attendance tracking.
+
+## Video provider architecture
+
+Create a provider abstraction so the service can be changed later.
+
+Store room IDs and necessary metadata in the database.
+
+Generate access credentials or room tokens securely on the backend.
+
+Never expose a provider's administrative API secret to the browser.
+
+Only authorized students and teachers should enter their assigned classrooms.
+
+Prevent students from joining unrelated classes by guessing room IDs.
+
+If the selected video provider requires paid credentials, clearly document this requirement.
+
+If no video provider is configured, show an honest configuration status instead of pretending that live video works.
+
+## Recording rules
+
+Recorded teacher lessons are included in Plus, Premium, and VIP.
+
+They are not included in Free or Basic.
+
+Make recording subject to provider capability, consent, school policy, and applicable privacy rules.
+
+Store recording metadata securely.
+
+Allow only authorized users to access recordings.
+
+Do not publish recordings publicly by default.
+
+Implement a retention policy and deletion workflow.
+
+---
+
+# 13. PARENT DASHBOARD
+
+Create a polished parent dashboard with an overview of every linked child.
+
+Include:
+
+- Child selector.
+- Subscription plan.
+- Subscription expiration date.
+- Upcoming classes.
+- Weekly timetable.
+- Attendance summary.
+- Grades.
+- Homework.
+- Teacher feedback.
+- Learning progress.
+- Recent AI lessons.
+- Available recordings.
+- Payment history.
+- Notifications.
+- Support access.
+
+Use charts only where they communicate useful information.
+
+Progress indicators should be based on real stored records, not invented sample data.
+
+For multiple children, ensure each child's data is clearly separated.
+
+Parents should be able to understand the child's educational status quickly without navigating through many screens.
+
+---
+
+# 14. STUDENT DASHBOARD
+
+Create a friendly and motivating student experience.
+
+Include:
+
+- Today's classes.
+- Upcoming lessons.
+- Subjects.
+- AI lesson generator.
+- Saved lessons.
+- Quizzes.
+- Practice exercises.
+- Homework.
+- Recorded lessons when entitled.
+- Grades and progress.
+- Attendance.
+- Notifications.
+
+Use age-appropriate design and language.
+
+Make the interface easy for younger students to navigate.
+
+Provide clear feedback after quizzes and exercises.
+
+Do not expose private teacher, parent, or administrator information.
+
+Ensure that students cannot access paid content outside their entitlements.
+
+---
+
+# 15. TEACHER DASHBOARD
+
+Provide a professional workspace where teachers can:
+
+- View today's schedule.
+- View weekly classes.
+- Open authorized virtual classrooms.
+- View assigned students.
+- Record attendance.
+- Create homework.
+- Upload resources.
+- Grade work.
+- Provide feedback.
+- Review student progress.
+- Prepare lessons using AI.
+- Review and edit generated lesson content.
+- Manage availability through the appropriate workflow.
+- Receive schedule and class notifications.
+
+Teachers should see only the students and classes assigned to them unless additional permission is explicitly granted.
+
+When a class is cancelled or rescheduled, update the timetable and notify affected users.
+
+---
+
+# 16. ADMINISTRATOR DASHBOARD
+
+Create a complete administration panel.
+
+Include:
+
+## Overview
+
+- Total registered students.
+- Active parents.
+- Active teachers.
+- Active subscriptions.
+- Monthly recurring revenue estimates.
+- Confirmed payment revenue.
+- Pending payments.
+- Upcoming classes.
+- Attendance summaries.
+- Teacher payroll obligations.
+- System health indicators.
+
+Clearly label estimates and actual figures.
+
+## User management
+
+- Search users.
+- Filter by role.
+- View account status.
+- Suspend and reactivate accounts.
+- Reset access through secure procedures.
+- Manage parent-child relationships.
+- Assign and update roles where authorized.
+
+## Education management
+
+- Create grade levels.
+- Create curricula.
+- Create subjects.
+- Configure supported languages.
+- Configure lesson templates.
+- Review AI-generated educational resources.
+
+## Subscription management
+
+- Edit plan prices.
+- Edit plan entitlements.
+- Configure AI usage limits.
+- View transactions.
+- Manage subscription status.
+- Handle refunds through supported provider workflows.
+- Review failed payments.
+
+## Scheduling management
+
+- View teacher availability.
+- Create and edit recurring classes.
+- Review capacity.
+- Assign teachers.
+- Resolve conflicts.
+- Review waiting lists.
+- Approve schedule-change requests.
+
+## Teacher management
+
+- Manage qualifications.
+- Configure salaries.
+- View workloads.
+- View assigned classes.
+- Record salary payments.
+- Produce payroll reports.
+
+## AI configuration
+
+- Select provider.
+- Configure model.
+- Configure generation limits.
+- View usage and errors.
+- Test the provider connection.
+- Display missing configuration clearly.
+
+Do not expose secret keys when displaying configuration status.
+
+---
+
+# 17. DATABASE AND DATA MODEL
+
+Inspect the existing persistence layer and retain it if appropriate.
+
+If the application currently lacks a proper persistent database, implement a suitable relational database, preferably PostgreSQL for production.
+
+Use a schema and migration system that can evolve safely.
+
+Do not use an in-memory JavaScript object or browser local storage as the primary database for accounts, payments, subscriptions, classes, or grades.
+
+Design appropriate entities, including:
+
+- Users.
+- Roles and permissions.
+- Parent-child relationships.
+- Students.
+- Teacher profiles.
+- Teacher qualifications.
+- Teacher availability.
+- School levels.
+- Grades.
+- Curricula.
+- Subjects.
+- Subscription plans.
+- Plan entitlements.
+- Subscriptions.
+- Payments.
+- Payment events.
+- AI usage records.
+- Generated lessons.
+- Saved resources.
+- Quizzes.
+- Quiz attempts.
+- Homework.
+- Homework submissions.
+- Grades.
+- Teacher feedback.
+- Class schedules.
+- Class sessions.
+- Class enrollments.
+- Attendance.
+- Video-room metadata.
+- Recordings.
+- Notifications.
+- Support requests.
+- Teacher salary records.
+- Salary payments.
+- Audit logs.
+
+Use foreign keys, appropriate indexes, validation, and transaction boundaries.
+
+Store monetary values in a safe numeric representation, such as integer minor units, and use MAD consistently for the configured prices.
+
+Keep timestamps consistent and handle time zones deliberately.
+
+Use database transactions for operations such as subscription activation and payment reconciliation.
+
+Do not delete financial records merely because a user account is disabled.
+
+---
+
+# 18. SECURITY AND PRIVACY
+
+Security is mandatory.
+
+Implement:
+
+- Password hashing using an established password-hashing algorithm.
+- Secure session handling or properly implemented short-lived access tokens and refresh-token rotation.
+- Server-side authorization.
+- Input validation.
+- Output encoding where appropriate.
+- Protection against SQL injection.
+- Protection against cross-site scripting.
+- CSRF protection where applicable.
+- Rate limiting.
+- Secure HTTP headers.
+- Safe file-upload validation.
+- Secure download permissions.
+- Webhook signature verification.
+- Audit logging for sensitive actions.
+- Environment-based secret management.
+- Account and session revocation.
+- Appropriate password-reset security.
+
+Use least-privilege access.
+
+Do not trust role information supplied by the frontend.
+
+Do not trust payment status supplied by the browser.
+
+Do not expose database credentials, API keys, session secrets, private student records, or teacher salary data.
+
+Avoid logging sensitive personal information.
+
+Implement data export and deletion workflows where required by applicable law and platform policy.
+
+Because the platform serves minors, minimize data collection and establish appropriate parental consent, recording consent, retention, and access policies.
+
+Do not claim legal compliance has been certified. Document the controls that have been implemented and identify any external legal or operational requirements that remain.
+
+---
+
+# 19. FILE STORAGE AND EDUCATIONAL RESOURCES
+
+Implement secure storage for:
+
+- Lesson attachments.
+- Teacher documents.
+- Homework resources.
+- Student submissions.
+- Recorded lesson metadata.
+- Generated exports.
+
+Use a suitable object-storage provider or local development storage with a clear production migration path.
+
+Validate file type and size.
+
+Restrict uploads to authorized users.
+
+Scan uploads for malicious content where an appropriate service is available.
+
+Use private storage and signed, time-limited download links where supported.
+
+Do not store uploaded files in a publicly accessible directory without access control.
+
+Organize resources by owner, course, subject, grade, and permitted audience.
+
+---
+
+# 20. NOTIFICATIONS
+
+Implement in-app notifications and an extensible notification service.
+
+Notify users about:
+
+- Upcoming classes.
+- Schedule changes.
+- Class cancellations.
+- Homework assignments.
+- New grades.
+- Teacher feedback.
+- Subscription expiration.
+- Payment confirmation.
+- Failed payments.
+- Recording availability.
+- Makeup-class approvals.
+
+Email notifications may be enabled through a configured email provider.
+
+Do not pretend an email has been sent if no email service is configured.
+
+Allow users to manage appropriate notification preferences.
+
+Use reminders that are useful and not excessively repetitive.
+
+---
+
+# 21. DESIGN AND USER EXPERIENCE
+
+Create a modern, polished educational platform.
+
+The design should feel trustworthy, organized, welcoming, and professional.
+
+Use:
+
+- A consistent design system.
+- A clear typography hierarchy.
+- Accessible color contrast.
+- Responsive layouts.
+- Attractive dashboard cards.
+- Clear navigation.
+- Useful empty states.
+- Skeleton loaders where appropriate.
+- Success and error notifications.
+- Confirmation dialogs for destructive actions.
+- Accessible form labels.
+- Keyboard navigation.
+- Mobile-friendly tables and cards.
+
+Provide a cohesive interface across student, parent, teacher, and administrator dashboards.
+
+Suggested visual direction:
+
+- Deep navy or dark blue for trust and structure.
+- Bright blue for primary actions.
+- Cyan or turquoise accents.
+- Soft neutral backgrounds.
+- Carefully used green, amber, and red status indicators.
+
+Use the existing project's styling system when possible.
+
+Avoid a generic template appearance. Give EduCraft a recognizable identity without sacrificing usability.
+
+## Main navigation
+
+Include suitable sections for:
+
+- Home.
+- My Learning.
+- AI Lesson Studio.
+- Live Classes.
+- Recorded Lessons.
+- Homework.
+- Progress.
+- Schedule.
+- Subscription.
+- Parent Dashboard.
+- Teacher Workspace.
+- Administration.
+
+Display navigation items according to the authenticated user's role and entitlements.
+
+Use real route navigation.
+
+Every visible button must have a meaningful action or be explicitly marked as unavailable because configuration is missing.
+
+---
+
+# 22. API AND BACKEND ARCHITECTURE
+
+Organize the Express backend into clear modules.
+
+Separate:
+
+- Routes.
+- Controllers.
+- Services.
+- Database access.
+- Validation.
+- Authentication.
+- Authorization.
+- AI providers.
+- Payment providers.
+- Video providers.
+- Export generation.
+- Notifications.
+- Scheduling.
+- Logging.
+
+Keep the existing API behavior compatible where reasonable.
+
+Inspect existing routes such as AI generation and export endpoints before changing them.
+
+Use consistent response formats and HTTP status codes.
+
+Provide API endpoints for:
+
+- Authentication.
+- Users.
+- Parent-child relationships.
+- Student profiles.
+- Teacher profiles.
+- Curricula and subjects.
+- AI lesson generation.
+- AI quizzes.
+- Saved resources.
+- PDF, DOCX, and PPTX exports.
+- Subscription plans.
+- Checkout.
+- Payment status.
+- Webhooks.
+- Timetables.
+- Class sessions.
+- Class enrollment.
+- Attendance.
+- Homework.
+- Grades.
+- Teacher feedback.
+- Recordings.
+- Notifications.
+- Administrative reports.
+
+Validate every request on the server.
+
+Implement pagination for large lists.
+
+Use appropriate filtering and sorting.
+
+Avoid returning unnecessary database fields.
+
+---
+
+# 23. ENVIRONMENT VARIABLES AND CONFIGURATION
+
+Create or update `.env.example` with all necessary configuration names.
+
+Include the appropriate variables for:
+
+- Application environment.
+- Server port.
+- Database connection.
+- Session or token secrets.
+- AI provider.
+- AI model.
+- AI provider API key.
+- Payment provider.
+- Payment API credentials.
+- Payment webhook secret.
+- Video provider.
+- Video API credentials.
+- File storage.
+- Email provider.
+- Application base URL.
+
+Use the actual naming conventions found in the project when practical.
+
+Do not include real secrets in `.env.example`.
+
+Do not commit `.env` files containing credentials.
+
+Provide safe development defaults only where appropriate.
+
+Never expose server environment variables through a public settings endpoint.
+
+---
+
+# 24. DEPLOYMENT
+
+Prepare the application for deployment.
+
+Inspect the existing repository and deployment setup before selecting infrastructure.
+
+Provide:
+
+- A working development command.
+- A production build command.
+- A production start command.
+- Database migrations.
+- A health-check endpoint.
+- Environment configuration instructions.
+- A deployment guide.
+- Secure secret configuration instructions.
+- Database backup guidance.
+- Logging and error monitoring guidance.
+
+Ensure the frontend can communicate with the backend in development and production.
+
+Configure CORS correctly for the intended origins.
+
+Do not use localhost URLs for production service calls.
+
+Do not assume a local file system is persistent in a cloud environment.
+
+If deployment requires a paid database, video provider, AI API, or payment provider, explain the requirement clearly.
+
+Do not claim that the application is publicly deployed unless it actually is.
+
+---
+
+# 25. TESTING AND QUALITY ASSURANCE
+
+Create meaningful automated tests.
+
+At minimum, test:
+
+## Authentication
+
+- Registration.
+- Login.
+- Logout.
+- Password reset flow.
+- Protected routes.
+- Role-based authorization.
+
+## Subscriptions
+
+- Free plan entitlements.
+- Basic plan entitlements.
+- Plus plan entitlements.
+- Premium plan entitlements.
+- VIP plan entitlements.
+- Monthly billing.
+- Quarterly billing.
+- Yearly billing.
+- Three-day grace period.
+- Expiration restrictions.
+- Restoration after confirmed payment.
+
+## AI
+
+- Successful generation.
+- Missing API credentials.
+- Provider timeout.
+- Invalid AI response.
+- Schema validation.
+- Usage-limit enforcement.
+- Safe error handling.
+
+## Scheduling
+
+- Automatic assignment.
+- Teacher availability.
+- Student conflicts.
+- Class capacity.
+- Plan-based capacity restrictions.
+- Makeup-class limits.
+- Waiting lists.
+
+## Payments
+
+- Successful test transaction.
+- Failed transaction.
+- Duplicate webhook.
+- Invalid webhook signature.
+- Pending bank transfer.
+- Prevention of unauthorized subscription activation.
+
+## Exports
+
+- PDF download.
+- Word download.
+- PowerPoint download.
+- Correct content.
+- Unauthorized download rejection.
+
+## Privacy
+
+- Parent cannot access an unrelated child.
+- Student cannot access another student's data.
+- Teacher cannot access unauthorized classes.
+- Teacher cannot change their own salary.
+- Ordinary users cannot access administrator endpoints.
+
+Run the available tests, TypeScript checks, linting, and production build.
+
+Fix failures caused by your changes.
+
+Do not claim tests passed unless they actually ran and passed.
+
+---
+
+# 26. DEVELOPMENT EXPERIENCE
+
+The application must remain usable during development even when optional external services are not configured.
+
+Create a clear system-status view for authorized administrators.
+
+Display whether each integration is configured:
+
+- Database.
+- AI provider.
+- Payment provider.
+- Video classroom provider.
+- File storage.
+- Email service.
+
+Do not reveal secrets.
+
+If the database is unavailable, explain the issue rather than silently losing data.
+
+If AI is unavailable, show a helpful error and preserve the user's form inputs.
+
+If payment processing is unavailable, do not mark subscriptions as paid.
+
+If video is unavailable, do not pretend the user has joined a live classroom.
+
+Where helpful, provide clearly labeled development-only test fixtures. Keep these separate from production data and disable them in production.
+
+---
+
+# 27. IMPLEMENTATION ORDER
+
+Work in phases, but continue until all feasible phases are implemented.
+
+Do not stop after creating a plan or an attractive dashboard.
+
+## Phase 1: Inspect and stabilize
+
+- Inspect all existing files.
+- Identify broken functionality.
+- Confirm the application architecture.
+- Preserve current working features.
+- Fix dependency and build issues.
+- Verify existing AI and export integrations.
+
+## Phase 2: Foundation
+
+- Database and migrations.
+- Authentication.
+- User roles.
+- Authorization.
+- Parent-child relationships.
+- Core dashboard navigation.
+
+## Phase 3: Education and AI
+
+- Grade and curriculum management.
+- Subjects.
+- AI provider configuration.
+- Lesson generation.
+- Quizzes and worksheets.
+- Saved educational resources.
+- PDF, Word, and PowerPoint exports.
+
+## Phase 4: Business operations
+
+- Subscription plans.
+- Entitlements.
+- Payment integration.
+- Subscription expiration.
+- Three-day grace period.
+- Parent payment dashboard.
+
+## Phase 5: Teacher operations
+
+- Teacher profiles.
+- Qualifications.
+- Availability.
+- Fixed monthly salaries.
+- Class scheduling.
+- Automatic student assignment.
+- Attendance and homework.
+
+## Phase 6: Virtual classrooms
+
+- Video provider integration.
+- Secure room access.
+- Live class scheduling.
+- Recording access.
+- Class notifications.
+- Makeup classes.
+
+## Phase 7: Reporting and refinement
+
+- Parent progress dashboards.
+- Teacher dashboards.
+- Administration analytics.
+- Financial reports.
+- Security review.
+- Automated tests.
+- Production build.
+- Deployment documentation.
+
+Prioritize end-to-end functionality over decorative complexity.
+
+---
+
+# 28. DEFINITION OF DONE
+
+The project is not complete merely because the website looks good.
+
+A feature is complete when its user interface, backend behavior, validation, permissions, persistence, and error handling work together.
+
+Before finishing:
+
+1. Verify that the application starts.
+2. Verify that the frontend builds.
+3. Verify that the backend starts.
+4. Verify that the database schema and migrations are valid.
+5. Verify that users can authenticate.
+6. Verify that roles and permissions are enforced on the server.
+7. Verify that AI generation uses the configured provider.
+8. Verify that generated lessons can be saved.
+9. Verify that PDF, Word, and PowerPoint exports work.
+10. Verify that plan entitlements are enforced.
+11. Verify that subscription activation requires trusted payment confirmation.
+12. Verify that scheduling prevents conflicts and capacity violations.
+13. Verify that users cannot access unauthorized student records.
+14. Verify that missing integrations produce clear, honest errors.
+15. Verify that no secrets are exposed to the frontend.
+16. Verify that existing working features have not been accidentally removed.
+
+After implementing the changes, provide a concise implementation report containing:
+
+- What was implemented.
+- Which existing features were preserved.
+- Which files were added or changed.
+- Which database migrations were created.
+- Which tests were run and their actual results.
+- Which environment variables must be configured.
+- Which external services require accounts or credentials.
+- Which features are fully working.
+- Which features remain incomplete and why.
+- The exact commands needed to run the application.
+
+Do not describe a feature as complete if it is only a placeholder.
+
+---
+
+# FINAL INSTRUCTION
+
+Build EduCraft AI Studio as a cohesive, secure, maintainable, full-stack education platform.
+
+**Inspect first. Preserve existing work. Implement real functionality. Test the result. Report honestly.**
+
+Do not replace the existing application with a static landing page.
+
+Do not remove the existing AI lesson-generation functionality.
+
+Do not fake payment success, live video, email delivery, database persistence, or document exports.
+
+Do not hardcode secret credentials.
+
+Do not stop after generating sample code or a proposed architecture.
+
+Make the greatest practical amount of working progress within the available environment. If an external service or missing credential prevents a feature from working, implement the integration boundary, explain the limitation, and leave the project ready for configuration.
+
+The final result should be a genuine foundation for a subscription-based education company, with students, parents, employed teachers, AI learning tools, scheduled classes, secure payments, and administrative control.

@@ -1,0 +1,6 @@
+{
+  "name": "EduCraft AI Studio",
+  "description": "Complete full-stack education platform combining AI-powered lessons, real human teachers, virtual classrooms, and comprehensive school management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

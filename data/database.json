@@ -1,0 +1,1464 @@
+{
+  "curricula": [
+    {
+      "id": "moroccan-biof",
+      "name": "Moroccan International Track (BIOF)",
+      "code": "BIOF",
+      "description": "Moroccan national curriculum with scientific subjects taught in French.",
+      "grades": [
+        {
+          "id": "p5",
+          "name": "5ème Année Primaire (CM1)",
+          "level": "primary"
+        },
+        {
+          "id": "p6",
+          "name": "6ème Année Primaire (CM2)",
+          "level": "primary"
+        },
+        {
+          "id": "m1",
+          "name": "1ère Année Collège (1AC)",
+          "level": "middle"
+        },
+        {
+          "id": "m2",
+          "name": "2ème Année Collège (2AC)",
+          "level": "middle"
+        },
+        {
+          "id": "m3",
+          "name": "3ème Année Collège (3AC / Brevet)",
+          "level": "middle"
+        },
+        {
+          "id": "h1",
+          "name": "Tronc Commun Scientifique",
+          "level": "high"
+        },
+        {
+          "id": "h2",
+          "name": "1ère Bac Sciences Math / Exp",
+          "level": "high"
+        },
+        {
+          "id": "h3",
+          "name": "2ème Bac Sciences Math / PC / SVT",
+          "level": "high"
+        }
+      ],
+      "subjects": [
+        {
+          "id": "math",
+          "name": "Mathématiques",
+          "icon": "📐"
+        },
+        {
+          "id": "phys",
+          "name": "Physique-Chimie",
+          "icon": "⚡"
+        },
+        {
+          "id": "svt",
+          "name": "Sciences de la Vie et de la Terre (SVT)",
+          "icon": "🧬"
+        },
+        {
+          "id": "fr",
+          "name": "Français",
+          "icon": "📖"
+        },
+        {
+          "id": "ar",
+          "name": "Arabe",
+          "icon": "✍️"
+        },
+        {
+          "id": "eng",
+          "name": "Anglais",
+          "icon": "🌍"
+        },
+        {
+          "id": "phil",
+          "name": "Philosophie",
+          "icon": "🏛️"
+        }
+      ]
+    },
+    {
+      "id": "moroccan-national",
+      "name": "Moroccan National Curriculum (Arabe)",
+      "code": "MASSAR",
+      "description": "Standard Moroccan public school curriculum.",
+      "grades": [
+        {
+          "id": "p4",
+          "name": "4ème Année Primaire",
+          "level": "primary"
+        },
+        {
+          "id": "p5",
+          "name": "5ème Année Primaire",
+          "level": "primary"
+        },
+        {
+          "id": "p6",
+          "name": "6ème Année Primaire (Certificat)",
+          "level": "primary"
+        },
+        {
+          "id": "m3",
+          "name": "3ème Année Collège (Brevet)",
+          "level": "middle"
+        },
+        {
+          "id": "h2",
+          "name": "1ère Baccalauréat",
+          "level": "high"
+        },
+        {
+          "id": "h3",
+          "name": "2ème Baccalauréat National",
+          "level": "high"
+        }
+      ],
+      "subjects": [
+        {
+          "id": "math",
+          "name": "الرياضيات (Mathématiques)",
+          "icon": "📐"
+        },
+        {
+          "id": "phys",
+          "name": "الفيزياء والكيمياء (Physique-Chimie)",
+          "icon": "⚡"
+        },
+        {
+          "id": "svt",
+          "name": "علوم الحياة والأرض (SVT)",
+          "icon": "🧬"
+        },
+        {
+          "id": "ar",
+          "name": "اللغة العربية (Arabe)",
+          "icon": "✍️"
+        },
+        {
+          "id": "fr",
+          "name": "اللغة الفرنسية (Français)",
+          "icon": "📖"
+        },
+        {
+          "id": "islam",
+          "name": "التربية الإسلامية",
+          "icon": "🕌"
+        }
+      ]
+    },
+    {
+      "id": "french-mission",
+      "name": "Mission Française (AEFE)",
+      "code": "AEFE",
+      "description": "Curriculum homologué AEFE (Écoles Françaises au Maroc).",
+      "grades": [
+        {
+          "id": "cm1",
+          "name": "CM1 (Primaire)",
+          "level": "primary"
+        },
+        {
+          "id": "cm2",
+          "name": "CM2 (Primaire)",
+          "level": "primary"
+        },
+        {
+          "id": "6eme",
+          "name": "6ème (Collège)",
+          "level": "middle"
+        },
+        {
+          "id": "3eme",
+          "name": "3ème (DNB Brevet)",
+          "level": "middle"
+        },
+        {
+          "id": "2nde",
+          "name": "Seconde (Lycée)",
+          "level": "high"
+        },
+        {
+          "id": "term",
+          "name": "Terminale (Baccalauréat Français)",
+          "level": "high"
+        }
+      ],
+      "subjects": [
+        {
+          "id": "math",
+          "name": "Mathématiques",
+          "icon": "📐"
+        },
+        {
+          "id": "phys",
+          "name": "Physique-Chimie",
+          "icon": "⚡"
+        },
+        {
+          "id": "svt",
+          "name": "SVT",
+          "icon": "🧬"
+        },
+        {
+          "id": "fr",
+          "name": "Français & Littérature",
+          "icon": "📖"
+        },
+        {
+          "id": "hist",
+          "name": "Histoire-Géographie",
+          "icon": "🗺️"
+        },
+        {
+          "id": "eng",
+          "name": "Anglais (LV1)",
+          "icon": "🌍"
+        }
+      ]
+    }
+  ],
+  "subscriptionPlans": [
+    {
+      "id": "free",
+      "name": "Free Plan",
+      "monthlyPriceMAD": 0,
+      "quarterlyPriceMAD": 0,
+      "yearlyPriceMAD": 0,
+      "liveClassesPerMonth": 0,
+      "maxStudentsPerClass": 0,
+      "makeupClassesPerMonth": 0,
+      "recordingsAccess": false,
+      "aiLessonsLimitPerMonth": 3,
+      "features": [
+        "3 AI-generated lessons per month",
+        "Basic quizzes & exercises",
+        "Limited access to educational previews",
+        "No live teacher classes",
+        "No recorded teacher lessons"
+      ]
+    },
+    {
+      "id": "basic",
+      "name": "Basic Plan",
+      "monthlyPriceMAD": 149,
+      "quarterlyPriceMAD": 399,
+      "yearlyPriceMAD": 1490,
+      "liveClassesPerMonth": 0,
+      "maxStudentsPerClass": 0,
+      "makeupClassesPerMonth": 0,
+      "recordingsAccess": false,
+      "aiLessonsLimitPerMonth": 100,
+      "features": [
+        "Full access to student school-level package",
+        "AI-generated lessons (100/month)",
+        "Comprehensive quizzes & practice sheets",
+        "Standard educational downloads",
+        "Parent progress tracking"
+      ]
+    },
+    {
+      "id": "plus",
+      "name": "Plus Plan",
+      "monthlyPriceMAD": 249,
+      "quarterlyPriceMAD": 699,
+      "yearlyPriceMAD": 2490,
+      "liveClassesPerMonth": 4,
+      "maxStudentsPerClass": 20,
+      "makeupClassesPerMonth": 0,
+      "recordingsAccess": true,
+      "aiLessonsLimitPerMonth": 250,
+      "popular": true,
+      "features": [
+        "Everything in Basic",
+        "4 live teacher classes per month",
+        "Recorded teacher lessons with full playback",
+        "Maximum 20 students per live class",
+        "Teacher homework & detailed grading",
+        "Interactive whiteboard & class chat"
+      ]
+    },
+    {
+      "id": "premium",
+      "name": "Premium Plan",
+      "monthlyPriceMAD": 400,
+      "quarterlyPriceMAD": 1099,
+      "yearlyPriceMAD": 3990,
+      "liveClassesPerMonth": 8,
+      "maxStudentsPerClass": 10,
+      "makeupClassesPerMonth": 1,
+      "recordingsAccess": true,
+      "aiLessonsLimitPerMonth": 500,
+      "features": [
+        "Everything in Plus",
+        "8 live teacher classes per month",
+        "Small group: Maximum 10 students per class",
+        "1 makeup class per month (flexible scheduling)",
+        "Recorded teacher lessons with archive",
+        "Advanced AI learning tools & explanations",
+        "Priority academic support"
+      ]
+    },
+    {
+      "id": "vip",
+      "name": "VIP Plan",
+      "monthlyPriceMAD": 700,
+      "quarterlyPriceMAD": 1950,
+      "yearlyPriceMAD": 7000,
+      "liveClassesPerMonth": 12,
+      "maxStudentsPerClass": 4,
+      "makeupClassesPerMonth": 2,
+      "recordingsAccess": true,
+      "aiLessonsLimitPerMonth": 1000,
+      "features": [
+        "Everything in Premium",
+        "12 live teacher classes/month total across subjects",
+        "Ultra-small group: Maximum 4 students per class",
+        "2 makeup classes per month with teacher approval",
+        "Full recording library forever",
+        "Highest-priority dedicated counselor support",
+        "Personalized AI revision & exam prediction"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-admin-1",
+      "name": "Dr. Tariq Berrada",
+      "email": "admin@educraft.ma",
+      "passwordHash": "$2a$10$vQcM76.9g7fI2L1pE/p84.cMfZ9l.c/sF1d6/3zWj4hK6/f9.6z2u",
+      "role": "owner",
+      "phone": "+212 661 234567",
+      "status": "active",
+      "createdAt": "2026-01-10T08:00:00Z"
+    },
+    {
+      "id": "usr-teacher-1",
+      "name": "Prof. Karim Alami",
+      "email": "karim.alami@educraft.ma",
+      "passwordHash": "$2a$10$vQcM76.9g7fI2L1pE/p84.cMfZ9l.c/sF1d6/3zWj4hK6/f9.6z2u",
+      "role": "teacher",
+      "phone": "+212 662 345678",
+      "status": "active",
+      "createdAt": "2026-02-01T09:00:00Z",
+      "teacherProfile": {
+        "qualifications": [
+          "Agrégation de Mathématiques (Université Mohammed V)",
+          "Master en Didactique des Sciences"
+        ],
+        "subjectsTaught": [
+          "Mathématiques"
+        ],
+        "gradeLevels": [
+          "middle",
+          "high"
+        ],
+        "curriculumExpertise": [
+          "moroccan-biof",
+          "moroccan-national",
+          "french-mission"
+        ],
+        "languages": [
+          "French",
+          "Arabic"
+        ],
+        "monthlySalaryMAD": 12000,
+        "employmentStatus": "full_time",
+        "weeklyAvailabilityHours": 24,
+        "notes": "Senior Mathematics educator. High success rate in Baccalauréat preparation."
+      }
+    },
+    {
+      "id": "usr-teacher-2",
+      "name": "Prof. Fatima Zahra Bennani",
+      "email": "fatima.zahra@educraft.ma",
+      "passwordHash": "$2a$10$vQcM76.9g7fI2L1pE/p84.cMfZ9l.c/sF1d6/3zWj4hK6/f9.6z2u",
+      "role": "teacher",
+      "phone": "+212 663 456789",
+      "status": "active",
+      "createdAt": "2026-02-15T09:00:00Z",
+      "teacherProfile": {
+        "qualifications": [
+          "Doctorat en Physique Appliquée",
+          "CAPES Physique-Chimie"
+        ],
+        "subjectsTaught": [
+          "Physique-Chimie",
+          "Sciences de la Vie et de la Terre (SVT)"
+        ],
+        "gradeLevels": [
+          "middle",
+          "high"
+        ],
+        "curriculumExpertise": [
+          "moroccan-biof",
+          "french-mission"
+        ],
+        "languages": [
+          "French",
+          "English"
+        ],
+        "monthlySalaryMAD": 11500,
+        "employmentStatus": "full_time",
+        "weeklyAvailabilityHours": 22,
+        "notes": "Specializes in laboratory simulations, STEM pedagogy, and thermodynamics."
+      }
+    },
+    {
+      "id": "usr-parent-1",
+      "name": "Hassan El Amrani",
+      "email": "hassan.elamrani@gmail.com",
+      "passwordHash": "$2a$10$vQcM76.9g7fI2L1pE/p84.cMfZ9l.c/sF1d6/3zWj4hK6/f9.6z2u",
+      "role": "parent",
+      "phone": "+212 664 567890",
+      "status": "active",
+      "createdAt": "2026-03-01T10:00:00Z"
+    },
+    {
+      "id": "usr-student-1",
+      "name": "Youssef El Amrani",
+      "email": "youssef.elamrani@educraft.ma",
+      "passwordHash": "$2a$10$vQcM76.9g7fI2L1pE/p84.cMfZ9l.c/sF1d6/3zWj4hK6/f9.6z2u",
+      "role": "student",
+      "parentId": "usr-parent-1",
+      "status": "active",
+      "createdAt": "2026-03-01T10:30:00Z",
+      "studentProfile": {
+        "schoolLevel": "middle",
+        "grade": "3ème Année Collège (3AC / Brevet)",
+        "curriculum": "moroccan-biof",
+        "preferredLanguage": "French",
+        "enrolledSubjects": [
+          "Mathématiques",
+          "Physique-Chimie",
+          "SVT",
+          "Français"
+        ],
+        "timeZone": "Africa/Casablanca",
+        "aiLessonsUsedThisMonth": 12,
+        "subscriptionPlanId": "plus",
+        "subscriptionExpiresAt": "2026-11-20T23:59:59Z",
+        "subscriptionStatus": "active"
+      }
+    },
+    {
+      "id": "usr-student-2",
+      "name": "Salma El Amrani",
+      "email": "salma.elamrani@educraft.ma",
+      "passwordHash": "$2a$10$vQcM76.9g7fI2L1pE/p84.cMfZ9l.c/sF1d6/3zWj4hK6/f9.6z2u",
+      "role": "student",
+      "parentId": "usr-parent-1",
+      "status": "active",
+      "createdAt": "2026-03-05T11:00:00Z",
+      "studentProfile": {
+        "schoolLevel": "primary",
+        "grade": "5ème Année Primaire (CM1)",
+        "curriculum": "moroccan-biof",
+        "preferredLanguage": "French",
+        "enrolledSubjects": [
+          "Mathématiques",
+          "Français",
+          "Arabe"
+        ],
+        "timeZone": "Africa/Casablanca",
+        "aiLessonsUsedThisMonth": 8,
+        "subscriptionPlanId": "premium",
+        "subscriptionExpiresAt": "2026-11-28T23:59:59Z",
+        "subscriptionStatus": "active"
+      }
+    },
+    {
+      "id": "usr-student-3",
+      "name": "Adam Tazi",
+      "email": "adam.tazi@educraft.ma",
+      "passwordHash": "$2a$10$vQcM76.9g7fI2L1pE/p84.cMfZ9l.c/sF1d6/3zWj4hK6/f9.6z2u",
+      "role": "student",
+      "status": "active",
+      "createdAt": "2026-03-10T14:00:00Z",
+      "studentProfile": {
+        "schoolLevel": "high",
+        "grade": "2ème Bac Sciences Math / PC / SVT",
+        "curriculum": "moroccan-biof",
+        "preferredLanguage": "French",
+        "enrolledSubjects": [
+          "Mathématiques",
+          "Physique-Chimie"
+        ],
+        "timeZone": "Africa/Casablanca",
+        "aiLessonsUsedThisMonth": 34,
+        "subscriptionPlanId": "vip",
+        "subscriptionExpiresAt": "2026-11-15T23:59:59Z",
+        "subscriptionStatus": "active"
+      }
+    }
+  ],
+  "classes": [
+    {
+      "id": "cls-101",
+      "title": "Mathématiques 3AC - Fonctions Linéaires & Équations",
+      "subject": "Mathématiques",
+      "grade": "3ème Année Collège (3AC / Brevet)",
+      "curriculum": "moroccan-biof",
+      "teacherId": "usr-teacher-1",
+      "teacherName": "Prof. Karim Alami",
+      "dayOfWeek": 2,
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "maxCapacity": 20,
+      "enrolledStudentIds": [
+        "usr-student-1"
+      ],
+      "videoRoomId": "educraft-math-3ac-tuesday",
+      "status": "scheduled"
+    },
+    {
+      "id": "cls-102",
+      "title": "Physique-Chimie 3AC - Oxydation des Métaux & pH",
+      "subject": "Physique-Chimie",
+      "grade": "3ème Année Collège (3AC / Brevet)",
+      "curriculum": "moroccan-biof",
+      "teacherId": "usr-teacher-2",
+      "teacherName": "Prof. Fatima Zahra Bennani",
+      "dayOfWeek": 4,
+      "startTime": "18:30",
+      "endTime": "19:30",
+      "maxCapacity": 20,
+      "enrolledStudentIds": [
+        "usr-student-1"
+      ],
+      "videoRoomId": "educraft-phys-3ac-thursday",
+      "status": "scheduled"
+    },
+    {
+      "id": "cls-103",
+      "title": "Mathématiques Primaire CM1 - Fractions & Décimaux",
+      "subject": "Mathématiques",
+      "grade": "5ème Année Primaire (CM1)",
+      "curriculum": "moroccan-biof",
+      "teacherId": "usr-teacher-1",
+      "teacherName": "Prof. Karim Alami",
+      "dayOfWeek": 3,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "maxCapacity": 10,
+      "enrolledStudentIds": [
+        "usr-student-2"
+      ],
+      "videoRoomId": "educraft-math-cm1-wednesday",
+      "status": "scheduled"
+    },
+    {
+      "id": "cls-104",
+      "title": "VIP Math 2 Bac - Nombres Complexes & Probabilités",
+      "subject": "Mathématiques",
+      "grade": "2ème Bac Sciences Math / PC / SVT",
+      "curriculum": "moroccan-biof",
+      "teacherId": "usr-teacher-1",
+      "teacherName": "Prof. Karim Alami",
+      "dayOfWeek": 6,
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "maxCapacity": 4,
+      "enrolledStudentIds": [
+        "usr-student-3"
+      ],
+      "videoRoomId": "educraft-vip-math-2bac-sat",
+      "status": "scheduled"
+    },
+    {
+      "id": "cls-mvjg8sb5",
+      "title": "Physique-Chimie (3ème Année Collège (3AC / Brevet)) - Groupe 5",
+      "subject": "Physique-Chimie",
+      "grade": "3ème Année Collège (3AC / Brevet)",
+      "curriculum": "moroccan-biof",
+      "teacherId": "usr-teacher-2",
+      "teacherName": "Prof. Fatima Zahra Bennani",
+      "dayOfWeek": 3,
+      "startTime": "18:00",
+      "endTime": "19:00",
+      "maxCapacity": 20,
+      "enrolledStudentIds": [
+        "usr-student-1"
+      ],
+      "videoRoomId": "educraft-room-cls-mvjg8sb5",
+      "status": "scheduled"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "ses-901",
+      "classId": "cls-101",
+      "date": "2026-10-20",
+      "topic": "Systèmes de deux équations à deux inconnues",
+      "teacherId": "usr-teacher-1",
+      "attendedStudentIds": [
+        "usr-student-1"
+      ],
+      "notes": "Excellent engagement. Youssef mastered the substitution method.",
+      "recordingUrl": "https://cdn.educraft.ma/recordings/2026-10-20-math-3ac-equations.mp4",
+      "durationMinutes": 60
+    },
+    {
+      "id": "ses-902",
+      "classId": "cls-102",
+      "date": "2026-10-18",
+      "topic": "Les solutions acides, basiques et neutres - Mesure du pH",
+      "teacherId": "usr-teacher-2",
+      "attendedStudentIds": [
+        "usr-student-1"
+      ],
+      "notes": "Practical demonstration on pH scale and safety rules with chemical reagents.",
+      "recordingUrl": "https://cdn.educraft.ma/recordings/2026-10-18-phys-3ac-ph.mp4",
+      "durationMinutes": 60
+    },
+    {
+      "id": "ses-903",
+      "classId": "cls-103",
+      "date": "2026-10-19",
+      "topic": "Introduction aux nombres décimaux et comparaison",
+      "teacherId": "usr-teacher-1",
+      "attendedStudentIds": [
+        "usr-student-2"
+      ],
+      "notes": "Salma participated actively and completed the decimal line exercise.",
+      "recordingUrl": "https://cdn.educraft.ma/recordings/2026-10-19-math-cm1-decimaux.mp4",
+      "durationMinutes": 60
+    }
+  ],
+  "homework": [
+    {
+      "id": "hw-501",
+      "title": "Devoir Maison : Systèmes d'équations et méthode de combinaison",
+      "subject": "Mathématiques",
+      "grade": "3ème Année Collège (3AC / Brevet)",
+      "curriculum": "moroccan-biof",
+      "teacherId": "usr-teacher-1",
+      "dueDate": "2026-10-25",
+      "instructions": "Résoudre les 4 exercices du document joint. Détailler toutes les étapes de calcul et vérifier vos solutions.",
+      "submissions": [
+        {
+          "studentId": "usr-student-1",
+          "studentName": "Youssef El Amrani",
+          "submittedAt": "2026-10-21T19:30:00Z",
+          "content": "J'ai résolu les exercices 1, 2, 3 et 4 en utilisant la méthode de combinaison linéaire pour le problème de géométrie.",
+          "grade": 18.5,
+          "feedback": "Très bon travail Youssef ! Rédaction rigoureuse et calculs exacts. Attention à bien énoncer l'ensemble solution S = {(x; y)}.",
+          "gradedAt": "2026-10-22T08:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "hw-502",
+      "title": "Fiche de TD : Calcul du pH et dilution d'une solution acide",
+      "subject": "Physique-Chimie",
+      "grade": "3ème Année Collège (3AC / Brevet)",
+      "curriculum": "moroccan-biof",
+      "teacherId": "usr-teacher-2",
+      "dueDate": "2026-10-26",
+      "instructions": "Expliquer l'évolution du pH lors de l'ajout d'eau distillée. Calculer la concentration des ions H+.",
+      "submissions": []
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay-701",
+      "userId": "usr-parent-1",
+      "studentId": "usr-student-1",
+      "planId": "plus",
+      "billingCycle": "monthly",
+      "amountMAD": 249,
+      "provider": "cmi",
+      "status": "completed",
+      "reference": "CMI-2026-9938472",
+      "createdAt": "2026-10-20T10:00:00Z",
+      "verifiedAt": "2026-10-20T10:01:15Z"
+    },
+    {
+      "id": "pay-702",
+      "userId": "usr-parent-1",
+      "studentId": "usr-student-2",
+      "planId": "premium",
+      "billingCycle": "monthly",
+      "amountMAD": 400,
+      "provider": "cmi",
+      "status": "completed",
+      "reference": "CMI-2026-9938499",
+      "createdAt": "2026-10-28T14:30:00Z",
+      "verifiedAt": "2026-10-28T14:31:00Z"
+    }
+  ],
+  "salaryPayments": [
+    {
+      "id": "sal-301",
+      "teacherId": "usr-teacher-1",
+      "teacherName": "Prof. Karim Alami",
+      "month": "2026-09",
+      "amountMAD": 12000,
+      "status": "paid",
+      "paidAt": "2026-09-30T16:00:00Z",
+      "reference": "VIR-BMCE-2026-09-102"
+    },
+    {
+      "id": "sal-302",
+      "teacherId": "usr-teacher-2",
+      "teacherName": "Prof. Fatima Zahra Bennani",
+      "month": "2026-09",
+      "amountMAD": 11500,
+      "status": "paid",
+      "paidAt": "2026-09-30T16:00:00Z",
+      "reference": "VIR-BP-2026-09-105"
+    },
+    {
+      "id": "sal-303",
+      "teacherId": "usr-teacher-1",
+      "teacherName": "Prof. Karim Alami",
+      "month": "2026-10",
+      "amountMAD": 12000,
+      "status": "scheduled",
+      "reference": "PR-2026-10-PENDING"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lsn-mvjh81w7",
+      "title": "The Human Respiratory System: Breathing and Gas Exchange",
+      "objective": "Understand the structure and function of the human respiratory organs, differentiate between inhalation and exhalation, and explain how oxygen enters the blood while carbon dioxide is eliminated.",
+      "schoolLevel": "middle",
+      "grade": "6ème Année Primaire (CM2)",
+      "curriculum": "moroccan-biof",
+      "subject": "Science",
+      "language": "English",
+      "difficulty": "medium",
+      "paragraphs": [
+        {
+          "title": "Anatomy and Pathway of Air",
+          "body": "The human respiratory system is responsible for supplying oxygen to the body and removing carbon dioxide. When we breathe in, air enters through the nose and mouth, where it is filtered, warmed, and moistened. It then travels down the pharynx and larynx, passing into the trachea (windpipe). The trachea branches into two tubes called bronchi, one leading to each lung. Inside the lungs, the bronchi divide into smaller tubes known as bronchioles, which finally end in tiny air sacs called alveoli, surrounded by a dense network of blood capillaries."
+        },
+        {
+          "title": "Mechanics of Breathing: Inhalation and Exhalation",
+          "body": "Breathing is driven by the movement of the diaphragm—a dome-shaped muscle located beneath the lungs—and the intercostal muscles between the ribs. During inhalation, the diaphragm contracts and moves downward, while the ribcage moves upward and outward. This increases the volume of the chest cavity, lowering the pressure inside the lungs and drawing air in. During exhalation, the diaphragm relaxes and moves upward, and the ribcage moves downward and inward. This decreases chest volume, increases internal pressure, and pushes air out of the lungs."
+        },
+        {
+          "title": "Gas Exchange in the Alveoli",
+          "body": "The primary function of the respiratory system takes place in the alveoli. Oxygen from the inhaled air passes through the thin walls of the alveoli and enters the surrounding capillaries to be transported by red blood cells throughout the body. Simultaneously, carbon dioxide—a waste product of cellular activity—passes from the blood into the alveoli to be exhaled. A common misconception is that the lungs are muscles; in reality, the lungs themselves contain no muscle tissue and are passively inflated and deflated by the action of the diaphragm and chest wall."
+        }
+      ],
+      "vocab": [
+        {
+          "term": "Trachea",
+          "definition": "The cartilaginous tube, also known as the windpipe, that connects the larynx to the bronchi.",
+          "example": "Air travels down the trachea before splitting into the left and right bronchi."
+        },
+        {
+          "term": "Alveoli",
+          "definition": "Tiny air sacs at the ends of the bronchioles where gas exchange takes place.",
+          "example": "Oxygen crosses the walls of the alveoli into the bloodstream during inhalation."
+        },
+        {
+          "term": "Diaphragm",
+          "definition": "A large dome-shaped muscle below the lungs that controls the pressure changes needed for breathing.",
+          "example": "When the diaphragm contracts, it moves downward to allow air to enter the lungs."
+        }
+      ],
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "Overview of the Respiratory System",
+          "category": "Introduction / Concept",
+          "bulletPoints": [
+            "Primary function: Supply oxygen and eliminate carbon dioxide",
+            "Key organs include the nose, trachea, bronchi, and lungs",
+            "Air pathway: Nose -> Pharynx -> Trachea -> Bronchi -> Alveoli"
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "The Mechanics of Breathing",
+          "category": "Biological Process",
+          "bulletPoints": [
+            "Inhalation: Diaphragm contracts/moves down, chest volume increases, air enters",
+            "Exhalation: Diaphragm relaxes/moves up, chest volume decreases, air leaves",
+            "Driven by intercostal muscles and the diaphragm"
+          ]
+        },
+        {
+          "slideNumber": 3,
+          "title": "Gas Exchange in the Alveoli",
+          "category": "Microscopic Anatomy",
+          "bulletPoints": [
+            "Alveoli provide a huge surface area for gas exchange",
+            "Oxygen diffuses from alveoli into the blood capillaries",
+            "Carbon dioxide diffuses from the blood capillaries into the alveoli"
+          ]
+        },
+        {
+          "slideNumber": 4,
+          "title": "Respiratory Health and Protection",
+          "category": "Health / Hygiene",
+          "bulletPoints": [
+            "Nose hairs and mucus filter dust and microbes from inhaled air",
+            "Smoking damages cilia and alveoli, reducing lung efficiency",
+            "Regular physical exercise strengthens respiratory muscles"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "question": "Trace the exact pathway of an oxygen molecule from the moment it enters the nose until it reaches an alveolus.",
+          "hint": "Follow the sequence of tubes starting from the nasal cavity down into the chest.",
+          "solution": "1. Nasal cavity (nose) / mouth -> 2. Pharynx (throat) -> 3. Larynx (voice box) -> 4. Trachea (windpipe) -> 5. Bronchi (left and right) -> 6. Bronchioles -> 7. Alveoli."
+        },
+        {
+          "question": "Compare the state of the diaphragm during inhalation versus exhalation.",
+          "hint": "Think about whether the muscle is flattening/moving down or doming upward.",
+          "solution": "During inhalation, the diaphragm contracts and moves downward (flattens), increasing chest volume. During exhalation, the diaphragm relaxes and moves upward (returns to a dome shape), decreasing chest volume."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Which structure is the main site of gas exchange in the human lungs?",
+          "options": [
+            "Trachea",
+            "Bronchi",
+            "Alveoli",
+            "Larynx"
+          ],
+          "answerIndex": 2,
+          "explanation": "Alveoli are tiny air sacs surrounded by capillaries where oxygen and carbon dioxide are exchanged."
+        },
+        {
+          "question": "What happens to the diaphragm during inhalation?",
+          "options": [
+            "It relaxes and moves upward",
+            "It contracts and moves downward",
+            "It stays completely still",
+            "It turns into bone"
+          ],
+          "answerIndex": 1,
+          "explanation": "Contraction of the diaphragm causes it to move downward, enlarging the chest cavity to draw air in."
+        }
+      ],
+      "answerKey": "Exercise 1: Nasal cavity -> Pharynx -> Larynx -> Trachea -> Bronchi -> Bronchioles -> Alveoli. Exercise 2: Inhalation = contracts/moves down; Exhalation = relaxes/moves up. Quiz Q1: Alveoli (Option C). Quiz Q2: Contracts and moves downward (Option B).",
+      "teacherNotes": "Use a model of the lungs using a plastic bottle, balloons, and a rubber sheet to demonstrate diaphragm action. Emphasize that lungs have no muscles of their own. Allocate 45 minutes for this lesson.",
+      "references": [
+        "Official Curriculum Framework moroccan-biof",
+        "Standard Curriculum Textbook Reference for 6ème Année / CM2 Science"
+      ],
+      "createdAt": "2026-10-22T11:47:29.047Z",
+      "createdBy": "guest"
+    },
+    {
+      "id": "lsn-mvjh7y4u",
+      "title": "Les Fractions : Compréhension, Comparaison et Opérations",
+      "objective": "Maîtriser la notion de fraction en tant qu'écriture d'un nombre, savoir simplifier, comparer des fractions et effectuer des additions et soustractions de fractions simples dans le cadre du programme de la 6ème année primaire (Option Internationale - BIOF).",
+      "schoolLevel": "middle",
+      "grade": "6ème Année Primaire (CM2)",
+      "curriculum": "moroccan-biof",
+      "subject": "Mathématiques",
+      "language": "French",
+      "difficulty": "medium",
+      "paragraphs": [
+        {
+          "title": "1. Qu'est-ce qu'une fraction ?",
+          "body": "Une fraction est un nombre qui permet de représenter des parties d'un tout ou d'une quantité. Elle s'écrit sous la forme de deux nombres séparés par une barre de fraction : a/b. Le nombre du haut, le numérateur 'a', indique combien de parts on considère. Le nombre du bas, le dénominateur 'b' (qui doit être différent de zéro), indique en combien de parts égales l'unité a été divisée. Par exemple, dans la fraction 3/4, l'unité est divisée en 4 parts égales et l'on en prend 3."
+        },
+        {
+          "title": "2. Fractions égales et Simplification",
+          "body": "Deux fractions sont égales si elles représentent la même proportion de l'unité. On peut obtenir une fraction égale en multipliant ou en divisant le numérateur et le dénominateur par un même nombre non nul. C'est le principe de la simplification : diviser le numérateur et le dénominateur par leur plus grand diviseur commun pour rendre la fraction irréductible. Par exemple, pour simplifier 6/8, on divise 6 et 8 par 2, ce qui donne 3/4."
+        },
+        {
+          "title": "3. Comparaison et Addition de fractions",
+          "body": "Pour comparer ou additionner deux fractions, elles doivent avoir le même dénominateur. Si les dénominateurs sont identiques, on compare ou on additionne simplement les numérateurs en conservant le dénominateur commun (par exemple : 2/7 + 3/7 = 5/7). Si les dénominateurs sont différents, il faut d'abord réduire les fractions au même dénominateur en utilisant les multiples communs."
+        }
+      ],
+      "vocab": [
+        {
+          "term": "Numérateur",
+          "definition": "Le nombre situé au-dessus de la barre de fraction, qui indique le nombre de parts prises.",
+          "example": "Dans la fraction 3/5, le numérateur est 3."
+        },
+        {
+          "term": "Dénominateur",
+          "definition": "Le nombre situé en dessous de la barre de fraction, qui indique le nombre total de parts égales dans l'unité.",
+          "example": "Dans la fraction 3/5, le dénominateur est 5."
+        },
+        {
+          "term": "Fraction irréductible",
+          "definition": "Une fraction qui ne peut plus être simplifiée car le numérateur et le dénominateur n'ont plus de diviseur commun autre que 1.",
+          "example": "La fraction 2/3 est irréductible."
+        }
+      ],
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "Introduction aux fractions",
+          "category": "Introduction / Concept",
+          "bulletPoints": [
+            "Partager une quantité en parts égales",
+            "Rôle du numérateur (nombre de parts prises)",
+            "Rôle du dénominateur (nombre total de parts)"
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "Fractions décimales",
+          "category": "Technique",
+          "bulletPoints": [
+            "Une fraction décimale a pour dénominateur 10, 100, 1000...",
+            "Lien direct avec les nombres décimaux",
+            "Exemple : 35/100 = 0,35"
+          ]
+        },
+        {
+          "slideNumber": 3,
+          "title": "Simplification des fractions",
+          "category": "Méthode",
+          "bulletPoints": [
+            "Diviser le numérateur et le dénominateur par le même nombre",
+            "Rechercher les critères de divisibilité (2, 3, 5)",
+            "Obtenir une fraction équivalente plus simple"
+          ]
+        },
+        {
+          "slideNumber": 4,
+          "title": "Addition de fractions",
+          "category": "Opérations",
+          "bulletPoints": [
+            "Condition sine qua non : avoir le même dénominateur",
+            "Additionner les numérateurs et garder le dénominateur",
+            "Exemple : 1/4 + 2/4 = 3/4"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "question": "Calculer la somme suivante : 3/8 + 7/8",
+          "hint": "Vérifiez si les dénominateurs sont identiques avant d'additionner.",
+          "solution": "Les deux fractions ont le même dénominateur (8). On additionne les numérateurs en gardant le dénominateur : (3 + 7) / 8 = 10/8. On peut ensuite simplifier en divisant par 2, ce qui donne 5/4."
+        },
+        {
+          "question": "Simplifier au maximum la fraction 18/24.",
+          "hint": "Trouvez un diviseur commun à 18 et 24, par exemple 6.",
+          "solution": "On cherche le plus grand diviseur commun de 18 et 24, qui est 6. On divise le numérateur et le dénominateur par 6 : 18 ÷ 6 = 3 et 24 ÷ 6 = 4. La fraction irréductible est donc 3/4."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Quel est le dénominateur de la fraction 7/12 ?",
+          "options": [
+            "7",
+            "12",
+            "5",
+            "19"
+          ],
+          "answerIndex": 1,
+          "explanation": "Le dénominateur est le nombre situé en bas de la barre de fraction, soit 12."
+        },
+        {
+          "question": "Quel est le résultat de l'addition 2/5 + 1/5 ?",
+          "options": [
+            "3/10",
+            "3/5",
+            "2/25",
+            "5/3"
+          ],
+          "answerIndex": 1,
+          "explanation": "Les dénominateurs étant égaux, on additionne les numérateurs : 2 + 1 = 3, et on garde le dénominateur 5, ce qui donne 3/5."
+        }
+      ],
+      "answerKey": "Quiz Q1: Option B (12). Quiz Q2: Option B (3/5). Exercice 1: 5/4. Exercice 2: 3/4.",
+      "teacherNotes": "Utiliser des représentations visuelles (gâteaux, bandes de papier pliées) pour introduire la notion de partage égal. Insister sur le fait que le dénominateur n'est pas le nombre total d'objets, mais le nombre de parts de l'unité. Durée estimée : 2 séances de 55 minutes.",
+      "references": [
+        "Official Curriculum Framework moroccan-biof",
+        "Mathématiques 6ème Année Primaire - Collection Maroc"
+      ],
+      "createdAt": "2026-10-22T11:47:24.174Z",
+      "createdBy": "guest"
+    },
+    {
+      "id": "lsn-mvjgmsg4",
+      "title": "Mathématiques : Le Théorème de Pythagore et sa Réciproque",
+      "objective": "Maîtriser les principes fondamentaux de Le Théorème de Pythagore et sa Réciproque, appliquer les règles d'analyse et résoudre des exercices types pour le niveau 3ème Année Collège (3AC / Brevet).",
+      "schoolLevel": "middle",
+      "grade": "3ème Année Collège (3AC / Brevet)",
+      "curriculum": "moroccan-biof",
+      "subject": "Mathématiques",
+      "language": "English",
+      "difficulty": "medium",
+      "paragraphs": [
+        {
+          "title": "1. Fondements et Définition de Le Théorème de Pythagore et sa Réciproque",
+          "body": "Dans le cadre du programme de 3ème Année Collège (3AC / Brevet) (moroccan-biof), l'étude de Le Théorème de Pythagore et sa Réciproque constitue une étape déterminante. Nous abordons la définition formelle, les contextes d'utilisation et les propriétés clés à retenir pour réussir ses évaluations."
+        },
+        {
+          "title": "2. Méthodologie et Développement Analytique",
+          "body": "Pour aborder une problématique liée à ce thème, la démarche scientifique préconise : 1) L'identification précise des hypothèses, 2) Le choix du théorème ou de la formule adaptée, 3) La rédaction rigoureuse du raisonnement sans saut logique."
+        },
+        {
+          "title": "3. Pièges Fréquents et Bonnes Pratiques",
+          "body": "L'erreur la plus fréquente chez les élèves réside dans l'oubli des conditions d'application. Prenez systématiquement le temps de formuler explicitement les hypothèses avant de poser le calcul final."
+        }
+      ],
+      "vocab": [
+        {
+          "term": "Hypothèse de départ",
+          "definition": "Proposition initiale considérée comme vraie et servant de point de départ au raisonnement.",
+          "example": "L'hypothèse stipule que les deux droites sont parallèles."
+        },
+        {
+          "term": "Raisonnement déductif",
+          "definition": "Processus intellectuel menant de prémisses vraies à une conclusion logiquement incontestable.",
+          "example": "Le raisonnement déductif valide la démonstration."
+        }
+      ],
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "Introduction à Le Théorème de Pythagore et sa Réciproque",
+          "category": "Notions Clés",
+          "bulletPoints": [
+            "Objectifs officiels du niveau 3ème Année Collège (3AC / Brevet)",
+            "Définitions indispensables et vocabulaire précis",
+            "Applications pratiques et contextes réels"
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "Propriétés & Formules Clés",
+          "category": "Formulation",
+          "bulletPoints": [
+            "Énoncé exact de la règle pédagogique",
+            "Méthode pas-à-pas de résolution",
+            "Vérification systématique de cohérence"
+          ]
+        },
+        {
+          "slideNumber": 3,
+          "title": "Synthèse et Synthèse d'Examen",
+          "category": "Méthodologie",
+          "bulletPoints": [
+            "Checklist avant de rendre sa copie",
+            "Les 3 pièges les plus fréquents à éviter",
+            "Auto-évaluation et progression"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "question": "Exercice d'application : En utilisant les principes étudiés sur Le Théorème de Pythagore et sa Réciproque, résolvez le problème en justifiant chaque étape.",
+          "hint": "Commencez par poser clairement les grandeurs connues et la formule générale.",
+          "solution": "En appliquant rigoureusement la formule et en respectant les unités du système international, on obtient le résultat attendu avec justification complète."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Dans l'étude de Le Théorème de Pythagore et sa Réciproque, quelle est la première étape indispensable ?",
+          "options": [
+            "Vérifier les conditions d'application de la propriété",
+            "Écrire le résultat final au hasard",
+            "Changer de sujet immédiatement",
+            "Ignorer les unités de mesure"
+          ],
+          "answerIndex": 0,
+          "explanation": "Une propriété mathématique ou scientifique n'est valide que lorsque l'ensemble de ses conditions initiales est formellement vérifié."
+        },
+        {
+          "question": "Comment s'assure-t-on de la validité d'un résultat ?",
+          "options": [
+            "En vérifiant la cohérence dimensionnelle et l'ordre de grandeur",
+            "En demandant à son voisin de table",
+            "En supprimant les chiffres après la virgule",
+            "Ce n'est jamais nécessaire"
+          ],
+          "answerIndex": 0,
+          "explanation": "La vérification de l'ordre de grandeur et des unités est le réflexe premier de l'esprit critique scientifique."
+        }
+      ],
+      "answerKey": "1: A (Vérifier les conditions) | 2: A (Cohérence dimensionnelle)",
+      "teacherNotes": "Prévoir 10 minutes d'introduction au tableau, puis faire passer 2 élèves pour expliciter leur raisonnement à l'oral.",
+      "references": [
+        "Programme Pédagogique Officiel moroccan-biof",
+        "Guide d'évaluation nationale"
+      ],
+      "createdAt": "2026-10-22T11:30:57.029Z",
+      "createdBy": "usr-parent-1"
+    },
+    {
+      "id": "lsn-mvjglk8z",
+      "title": "Mathématiques : Le Théorème de Pythagore et sa Réciproque",
+      "objective": "Maîtriser les principes fondamentaux de Le Théorème de Pythagore et sa Réciproque, appliquer les règles d'analyse et résoudre des exercices types pour le niveau 3ème Année Collège (3AC / Brevet).",
+      "schoolLevel": "middle",
+      "grade": "3ème Année Collège (3AC / Brevet)",
+      "curriculum": "moroccan-biof",
+      "subject": "Mathématiques",
+      "language": "French",
+      "difficulty": "medium",
+      "paragraphs": [
+        {
+          "title": "1. Fondements et Définition de Le Théorème de Pythagore et sa Réciproque",
+          "body": "Dans le cadre du programme de 3ème Année Collège (3AC / Brevet) (moroccan-biof), l'étude de Le Théorème de Pythagore et sa Réciproque constitue une étape déterminante. Nous abordons la définition formelle, les contextes d'utilisation et les propriétés clés à retenir pour réussir ses évaluations."
+        },
+        {
+          "title": "2. Méthodologie et Développement Analytique",
+          "body": "Pour aborder une problématique liée à ce thème, la démarche scientifique préconise : 1) L'identification précise des hypothèses, 2) Le choix du théorème ou de la formule adaptée, 3) La rédaction rigoureuse du raisonnement sans saut logique."
+        },
+        {
+          "title": "3. Pièges Fréquents et Bonnes Pratiques",
+          "body": "L'erreur la plus fréquente chez les élèves réside dans l'oubli des conditions d'application. Prenez systématiquement le temps de formuler explicitement les hypothèses avant de poser le calcul final."
+        }
+      ],
+      "vocab": [
+        {
+          "term": "Hypothèse de départ",
+          "definition": "Proposition initiale considérée comme vraie et servant de point de départ au raisonnement.",
+          "example": "L'hypothèse stipule que les deux droites sont parallèles."
+        },
+        {
+          "term": "Raisonnement déductif",
+          "definition": "Processus intellectuel menant de prémisses vraies à une conclusion logiquement incontestable.",
+          "example": "Le raisonnement déductif valide la démonstration."
+        }
+      ],
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "Introduction à Le Théorème de Pythagore et sa Réciproque",
+          "category": "Notions Clés",
+          "bulletPoints": [
+            "Objectifs officiels du niveau 3ème Année Collège (3AC / Brevet)",
+            "Définitions indispensables et vocabulaire précis",
+            "Applications pratiques et contextes réels"
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "Propriétés & Formules Clés",
+          "category": "Formulation",
+          "bulletPoints": [
+            "Énoncé exact de la règle pédagogique",
+            "Méthode pas-à-pas de résolution",
+            "Vérification systématique de cohérence"
+          ]
+        },
+        {
+          "slideNumber": 3,
+          "title": "Synthèse et Synthèse d'Examen",
+          "category": "Méthodologie",
+          "bulletPoints": [
+            "Checklist avant de rendre sa copie",
+            "Les 3 pièges les plus fréquents à éviter",
+            "Auto-évaluation et progression"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "question": "Exercice d'application : En utilisant les principes étudiés sur Le Théorème de Pythagore et sa Réciproque, résolvez le problème en justifiant chaque étape.",
+          "hint": "Commencez par poser clairement les grandeurs connues et la formule générale.",
+          "solution": "En appliquant rigoureusement la formule et en respectant les unités du système international, on obtient le résultat attendu avec justification complète."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Dans l'étude de Le Théorème de Pythagore et sa Réciproque, quelle est la première étape indispensable ?",
+          "options": [
+            "Vérifier les conditions d'application de la propriété",
+            "Écrire le résultat final au hasard",
+            "Changer de sujet immédiatement",
+            "Ignorer les unités de mesure"
+          ],
+          "answerIndex": 0,
+          "explanation": "Une propriété mathématique ou scientifique n'est valide que lorsque l'ensemble de ses conditions initiales est formellement vérifié."
+        },
+        {
+          "question": "Comment s'assure-t-on de la validité d'un résultat ?",
+          "options": [
+            "En vérifiant la cohérence dimensionnelle et l'ordre de grandeur",
+            "En demandant à son voisin de table",
+            "En supprimant les chiffres après la virgule",
+            "Ce n'est jamais nécessaire"
+          ],
+          "answerIndex": 0,
+          "explanation": "La vérification de l'ordre de grandeur et des unités est le réflexe premier de l'esprit critique scientifique."
+        }
+      ],
+      "answerKey": "1: A (Vérifier les conditions) | 2: A (Cohérence dimensionnelle)",
+      "teacherNotes": "Prévoir 10 minutes d'introduction au tableau, puis faire passer 2 élèves pour expliciter leur raisonnement à l'oral.",
+      "references": [
+        "Programme Pédagogique Officiel moroccan-biof",
+        "Guide d'évaluation nationale"
+      ],
+      "createdAt": "2026-10-22T11:29:59.747Z",
+      "createdBy": "usr-admin-1"
+    },
+    {
+      "id": "lsn-mvjg8iq9",
+      "title": "Mathématiques : Les fractions",
+      "objective": "Maîtriser les principes fondamentaux de Les fractions, appliquer les règles d'analyse et résoudre des exercices types pour le niveau 3AC.",
+      "schoolLevel": "middle",
+      "grade": "3AC",
+      "curriculum": "moroccan-biof",
+      "subject": "Mathématiques",
+      "language": "French",
+      "difficulty": "medium",
+      "paragraphs": [
+        {
+          "title": "1. Fondements et Définition de Les fractions",
+          "body": "Dans le cadre du programme de 3AC (moroccan-biof), l'étude de Les fractions constitue une étape déterminante. Nous abordons la définition formelle, les contextes d'utilisation et les propriétés clés à retenir pour réussir ses évaluations."
+        },
+        {
+          "title": "2. Méthodologie et Développement Analytique",
+          "body": "Pour aborder une problématique liée à ce thème, la démarche scientifique préconise : 1) L'identification précise des hypothèses, 2) Le choix du théorème ou de la formule adaptée, 3) La rédaction rigoureuse du raisonnement sans saut logique."
+        },
+        {
+          "title": "3. Pièges Fréquents et Bonnes Pratiques",
+          "body": "L'erreur la plus fréquente chez les élèves réside dans l'oubli des conditions d'application. Prenez systématiquement le temps de formuler explicitement les hypothèses avant de poser le calcul final."
+        }
+      ],
+      "vocab": [
+        {
+          "term": "Hypothèse de départ",
+          "definition": "Proposition initiale considérée comme vraie et servant de point de départ au raisonnement.",
+          "example": "L'hypothèse stipule que les deux droites sont parallèles."
+        },
+        {
+          "term": "Raisonnement déductif",
+          "definition": "Processus intellectuel menant de prémisses vraies à une conclusion logiquement incontestable.",
+          "example": "Le raisonnement déductif valide la démonstration."
+        }
+      ],
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "Introduction à Les fractions",
+          "category": "Notions Clés",
+          "bulletPoints": [
+            "Objectifs officiels du niveau 3AC",
+            "Définitions indispensables et vocabulaire précis",
+            "Applications pratiques et contextes réels"
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "Propriétés & Formules Clés",
+          "category": "Formulation",
+          "bulletPoints": [
+            "Énoncé exact de la règle pédagogique",
+            "Méthode pas-à-pas de résolution",
+            "Vérification systématique de cohérence"
+          ]
+        },
+        {
+          "slideNumber": 3,
+          "title": "Synthèse et Synthèse d'Examen",
+          "category": "Méthodologie",
+          "bulletPoints": [
+            "Checklist avant de rendre sa copie",
+            "Les 3 pièges les plus fréquents à éviter",
+            "Auto-évaluation et progression"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "question": "Exercice d'application : En utilisant les principes étudiés sur Les fractions, résolvez le problème en justifiant chaque étape.",
+          "hint": "Commencez par poser clairement les grandeurs connues et la formule générale.",
+          "solution": "En appliquant rigoureusement la formule et en respectant les unités du système international, on obtient le résultat attendu avec justification complète."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Dans l'étude de Les fractions, quelle est la première étape indispensable ?",
+          "options": [
+            "Vérifier les conditions d'application de la propriété",
+            "Écrire le résultat final au hasard",
+            "Changer de sujet immédiatement",
+            "Ignorer les unités de mesure"
+          ],
+          "answerIndex": 0,
+          "explanation": "Une propriété mathématique ou scientifique n'est valide que lorsque l'ensemble de ses conditions initiales est formellement vérifié."
+        },
+        {
+          "question": "Comment s'assure-t-on de la validité d'un résultat ?",
+          "options": [
+            "En vérifiant la cohérence dimensionnelle et l'ordre de grandeur",
+            "En demandant à son voisin de table",
+            "En supprimant les chiffres après la virgule",
+            "Ce n'est jamais nécessaire"
+          ],
+          "answerIndex": 0,
+          "explanation": "La vérification de l'ordre de grandeur et des unités est le réflexe premier de l'esprit critique scientifique."
+        }
+      ],
+      "answerKey": "1: A (Vérifier les conditions) | 2: A (Cohérence dimensionnelle)",
+      "teacherNotes": "Prévoir 10 minutes d'introduction au tableau, puis faire passer 2 élèves pour expliciter leur raisonnement à l'oral.",
+      "references": [
+        "Programme Pédagogique Officiel moroccan-biof",
+        "Guide d'évaluation nationale"
+      ],
+      "createdAt": "2026-10-22T11:19:51.249Z",
+      "createdBy": "guest"
+    },
+    {
+      "id": "lsn-001",
+      "title": "Le Théorème de Thalès et sa Réciproque",
+      "objective": "Comprendre et appliquer le théorème direct et sa réciproque pour calculer des longueurs et démontrer le parallélisme.",
+      "schoolLevel": "middle",
+      "grade": "3ème Année Collège (3AC / Brevet)",
+      "curriculum": "moroccan-biof",
+      "subject": "Mathématiques",
+      "language": "French",
+      "difficulty": "medium",
+      "paragraphs": [
+        {
+          "title": "1. Énoncé du Théorème Direct de Thalès",
+          "body": "Soient deux droites (d) et (d') sécantes en un point A. Soient B et M deux points de (d), distincts de A. Soient C et N deux points de (d'), distincts de A. Si les droites (BC) et (MN) sont parallèles, alors les rapports des longueurs sont égaux : AM/AB = AN/AC = MN/BC. Cette égalité permet de calculer une longueur manquante connaissant les trois autres."
+        },
+        {
+          "title": "2. Réciproque du Théorème de Thalès",
+          "body": "La réciproque sert à prouver que deux droites sont parallèles. Si les points A, M, B d'une part, et A, N, C d'autre part sont alignés dans le même ordre, et si AM/AB = AN/AC, alors les droites (MN) et (BC) sont strictement parallèles."
+        },
+        {
+          "title": "3. Pièges fréquents & Bonnes Pratiques",
+          "body": "Attention : il est indispensable de vérifier l'ordre des points sur chacune des deux droites sécantes avant d'appliquer la réciproque. Une simple égalité des quotients sans condition d'alignement ordonné ne suffit pas à garantir le parallélisme."
+        }
+      ],
+      "vocab": [
+        {
+          "term": "Droites sécantes",
+          "definition": "Deux droites qui se coupent en un unique point d'intersection.",
+          "example": "Les droites (AB) et (AC) sont sécantes en A."
+        },
+        {
+          "term": "Rapports de proportionnalité",
+          "definition": "Quotients formés par les longueurs des segments correspondants qui sont égaux dans une configuration de Thalès.",
+          "example": "Le quotient AM/AB est égal au rapport de réduction."
+        },
+        {
+          "term": "Réciproque",
+          "definition": "Proposition obtenue en intervertissant l'hypothèse et la conclusion d'un théorème mathématique.",
+          "example": "On utilise la réciproque de Thalès pour démontrer que (BC) // (DE)."
+        }
+      ],
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "Configuration de Thalès",
+          "category": "Introduction",
+          "bulletPoints": [
+            "Deux droites sécantes en A",
+            "Deux points M et B sur la première droite",
+            "Deux points N et C sur la deuxième droite",
+            "Hypothèse fondamentale : (MN) // (BC)"
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "L'Égalité des Trois Rapports",
+          "category": "Formule Clé",
+          "bulletPoints": [
+            "AM / AB = AN / AC = MN / BC",
+            "Les petits côtés sont proportionnels aux grands côtés",
+            "Utilité : Déterminer une longueur inconnue avec le produit en croix"
+          ]
+        },
+        {
+          "slideNumber": 3,
+          "title": "La Réciproque pour le Parallélisme",
+          "category": "Démonstration",
+          "bulletPoints": [
+            "Condition 1 : Alignement des points dans le même ordre",
+            "Condition 2 : Égalité des deux premiers rapports AM/AB = AN/AC",
+            "Conclusion : Les droites (MN) et (BC) sont parallèles"
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "question": "Soit un triangle ABC avec AB = 6 cm, AC = 8 cm. Le point M appartient à [AB] tel que AM = 2 cm. La parallèle à (BC) passant par M coupe [AC] en N. Calculer AN.",
+          "hint": "Appliquer AM/AB = AN/AC et faire un produit en croix.",
+          "solution": "AM/AB = 2/6 = 1/3. Donc AN/AC = 1/3, ce qui donne AN = AC / 3 = 8 / 3 ≈ 2.67 cm."
+        }
+      ],
+      "quiz": [
+        {
+          "question": "À quoi sert principalement la réciproque du théorème de Thalès ?",
+          "options": [
+            "À calculer la longueur d'un cercle",
+            "À démontrer que deux droites sont parallèles",
+            "À prouver qu'un triangle est rectangle",
+            "À trouver l'aire d'un parallélogramme"
+          ],
+          "answerIndex": 1,
+          "explanation": "Le théorème direct sert à calculer des longueurs, tandis que la réciproque sert à prouver que deux droites sont parallèles."
+        },
+        {
+          "question": "Dans une configuration où AM = 3, AB = 9, AN = 4, AC = 12, et les points sont alignés dans le même ordre, que peut-on déduire ?",
+          "options": [
+            "Les droites (MN) et (BC) sont perpendiculaires",
+            "Les droites (MN) et (BC) sont parallèles",
+            "Le triangle est isocèle",
+            "On ne peut rien conclure sans la longueur de BC"
+          ],
+          "answerIndex": 1,
+          "explanation": "AM/AB = 3/9 = 1/3 et AN/AC = 4/12 = 1/3. Les rapports sont égaux et les points alignés dans le même ordre, donc (MN) // (BC)."
+        }
+      ],
+      "answerKey": "1: B (Démontrer que deux droites sont parallèles) | 2: B ((MN) // (BC))",
+      "teacherNotes": "Prévoir 15 minutes d'exercices guidés sur tableau blanc. Vérifier que les élèves ne confondent pas le théorème de Pythagore et celui de Thalès.",
+      "references": [
+        "Programme officiel Ministère de l'Éducation Nationale Marocain (3AC)",
+        "Manuel Univers Mathématiques 3AC"
+      ],
+      "createdAt": "2026-10-15T10:00:00Z",
+      "createdBy": "usr-teacher-1"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "userId": "usr-student-1",
+      "title": "Nouveau Devoir Assigné",
+      "message": "Prof. Karim Alami a publié le Devoir Maison sur les systèmes d'équations pour le 25 Octobre.",
+      "type": "grade",
+      "read": false,
+      "createdAt": "2026-10-21T09:00:00Z",
+      "link": "/homework"
+    },
+    {
+      "id": "notif-2",
+      "userId": "usr-parent-1",
+      "title": "Note de Devoir Publiée",
+      "message": "Youssef a obtenu la note de 18.5/20 en Mathématiques. Félicitations !",
+      "type": "grade",
+      "read": false,
+      "createdAt": "2026-10-22T08:05:00Z",
+      "link": "/parent"
+    },
+    {
+      "id": "notif-3",
+      "userId": "usr-student-1",
+      "title": "Classe Virtuelle Aujourd'hui",
+      "message": "Votre cours de Mathématiques 3AC démarre à 18h00 avec Prof. Karim Alami.",
+      "type": "class",
+      "read": true,
+      "createdAt": "2026-10-22T07:00:00Z",
+      "link": "/live-classes"
+    }
+  ],
+  "aiConfig": {
+    "provider": "gemini",
+    "geminiModel": "gemini-flash-lite-latest",
+    "openrouterModel": "qwen/qwen-2.5-72b-instruct:free",
+    "openrouterApiKey": "",
+    "temperature": 0.3
+  }
+}
